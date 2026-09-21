@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group Poster</title>
+<link rel="stylesheet" href="sidepanel.css">
+</head>
+<body class="narrow">
+  <header class="hd">
+    <div class="logo">GP</div>
+    <div><b>Group Poster</b><div class="sub">Đăng bài group · quản lý theo category, từ khóa và ngày</div></div>
+    <span class="sp"></span>
+    <button class="synci" id="syncBtn" title="Đồng bộ Google Sheet"><i></i><span id="syncTxt">Chưa kết nối sheet</span></button>
+    <button class="expand" id="expandBtn" title="Mở giao diện rộng trong tab mới">⤢ Mở rộng</button>
+  </header>
+  <nav class="tabs">
+    <button class="tab" data-v="post">Đăng bài</button>
+    <button class="tab" data-v="group">Group</button>
+    <button class="tab" data-v="content">Nội dung</button>
+    <button class="tab" data-v="settings">Cài đặt</button>
+  </nav>
+  <main>
+    <section class="view" id="viewPost"></section>
+    <section class="view" id="viewGroup" hidden></section>
+    <section class="view" id="viewContent" hidden></section>
+    <section class="view" id="viewSettings" hidden></section>
+  </main>
+  <div class="pop" id="popCat"></div>
+  <div class="pop" id="popKw"></div>
+  <div class="pop menu" id="popMenu"></div>
+  <div class="ov" id="ov"><div class="drawer" id="drawer"></div></div>
+  <div class="mov" id="mov"><div class="mdl" id="mdl"></div></div>
+  <input type="file" id="csvFile" accept=".csv,text/csv,.txt" hidden>
+  <div id="toast"></div>
+  <script src="lib.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
